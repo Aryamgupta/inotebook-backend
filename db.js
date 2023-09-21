@@ -1,6 +1,6 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+require("dotenv").config();
 const mongoURI = process.env.REACT_APP_DATA_BASE;
-
 
 
 const connectToMongo = async () => {
