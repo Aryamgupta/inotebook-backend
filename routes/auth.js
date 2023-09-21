@@ -99,7 +99,7 @@ router.post('/login', [
           res.json({ success, authtoken })
     }
     catch(error){
-        // console.error(error.message);
+        console.error(error.message);
         success  = false;
         res.status(500).send({success,message : "Some error occured"});
     }
