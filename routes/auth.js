@@ -109,15 +109,17 @@ router.post('/login', [
 router.post('/getuserdetail', getuser , async (req, res) => {
     let success = false;
     try {
+        console.log(req);
         let userId = req.user.id;
+        
         const user = await User.find({_id : userId}).select("-password");
         res.send(user);
         
-        // console.log("data retrived successfully");
+        
 
       } catch (error) {
         // console.error(error.message);
-        res.status(500).send({success ,message : "Internal Server Error"});
+        res.status(500).send({success ,message : error});
       }
 })
 
