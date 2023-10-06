@@ -119,7 +119,7 @@ router.post('/getuserdetail', getuser , async (req, res) => {
 
       } catch (error) {
         // console.error(error.message);
-        res.status(500).send({success ,message : error});
+        res.status(500).send({success ,message : error,req : req});
       }
 })
 
