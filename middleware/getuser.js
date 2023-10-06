@@ -13,6 +13,7 @@ const getuser = (req, res,next) => {
         // console.log(data);
         // console.log(token);
         req.user = data.user;
+        console.log(data);
         next();
     } catch (error) {
         res.status(401).send({ error: "Invalid Token / Access Denied" });
